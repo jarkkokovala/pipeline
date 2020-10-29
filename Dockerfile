@@ -11,4 +11,4 @@ EXPOSE 5000
 ENTRYPOINT ["flask"]
 ENV FLASK_APP=app.py
 
-CMD ["run", "-h", "0.0.0.0"]
+CMD ["run", "-h", "0.0.0.0", "-p", "$PORT"]
