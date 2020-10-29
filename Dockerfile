@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-ENTRYPOINT ["flask"]
 ENV FLASK_APP=app.py
 
-CMD ["run", "-h", "0.0.0.0", "-p", $PORT]
+ENTRYPOINT ["/bin/sh"]
+CMD ["-c", "/app/run-flask.sh"]
